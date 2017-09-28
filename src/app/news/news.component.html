@@ -1,0 +1,15 @@
+{{title}}
+
+<ul>
+    <li class="text" *ngFor="let item of news | async">
+        {{item.$key}}
+
+        <p>
+        {{item.title}}
+        {{item.content}}
+        {{item.imageUrl}}
+        </p>
+    </li>
+</ul>
+
+<quickinfo-content></quickinfo-content>

@@ -1,0 +1,33 @@
+.sidebar:first-child {
+    margin-left: 8.47458%;
+}
+
+.sidebar {
+    width: 23.72881%;
+    
+    padding: 0 0 0 20px;
+}
+
+.sidebar .sidebar-date {
+    background: none repeat scroll 0 0 #000;
+    color: #FFFFFF;
+    padding: 0 21px 5px;
+}
+
+.sidebar .sidebar-location {
+    background: none repeat scroll 0 0 #53225f;
+    color: #fff;
+    margin: 10px 0 0;
+    padding: 0 21px 1px;
+}
+
+.sidebar .sidebar-timetables {
+    background: none repeat scroll 0 0 #6dba75;
+    
+    margin: 10px 0 0;
+    padding: 0 21px 1px;
+}
+
+.pull_right {
+    float: right !important;
+}

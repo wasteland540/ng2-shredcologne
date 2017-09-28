@@ -1,0 +1,24 @@
+.site-heading h1 {
+    background: #6dba75;
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.content .row {
+    padding: 20px 20px 20px 20px;
+}
+
+.content h1, .content h2, .content h3 {    
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.riderlist-table th {
+    padding: 10px;
+}
+
+.riderlist-table td {
+    padding: 10px;
+}

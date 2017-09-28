@@ -1,0 +1,18 @@
+.site-heading h1 {
+    background: #6dba75;
+    display: inline-block;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.disclaimer-pdf {
+    background: none repeat scroll 0 0 #000;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 26px;
+}
+
+.disclaimer-pdf a {
+    color: #fff;
+    text-decoration: underline;
+}

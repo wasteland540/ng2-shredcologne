@@ -1,0 +1,163 @@
+<div class="site-heading">
+    <h1>Registration</h1>
+</div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <form #form="ngForm" (ngSubmit)="submitRider()">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group" [ngClass]="{'has-error': firstname.invalid && firstname.touched }">
+                        <input type="text" class="form-control" name="firstname" placeholder="Firstname" required
+                            [(ngModel)]="newRider.firstname" #firstname="ngModel">
+                
+                        <span class="help-block" *ngIf="firstname.invalid && firstname.touched">Firstname is required.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group" [ngClass]="{'has-error': lastname.invalid && lastname.touched }">
+                        <input type="text" class="form-control" name="lastname" placeholder="Lastname" required
+                            [(ngModel)]="newRider.lastname" #lastname="ngModel">
+                
+                        <span class="help-block" *ngIf="lastname.invalid && lastname.touched">Lastname is required.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="age" placeholder="Age"
+                            [(ngModel)]="newRider.age">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="street" placeholder="Street"
+                            [(ngModel)]="newRider.street">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="zipcode" placeholder="Zipcode"
+                            [(ngModel)]="newRider.zipcode">
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="city" placeholder="City"
+                            [(ngModel)]="newRider.city">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group" [ngClass]="{'has-error': country.invalid && country.touched }">
+                        <input type="text" class="form-control" name="country" placeholder="Country" required
+                            [(ngModel)]="newRider.country" #country="ngModel">
+                
+                        <span class="help-block" *ngIf="country.invalid && country.touched">Country is required.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group" [ngClass]="{'has-error': email.invalid && email.touched }">
+                        <input type="text" class="form-control" name="email" placeholder="Email" required
+                            [(ngModel)]="newRider.email" #email="ngModel">
+                
+                        <span class="help-block" *ngIf="email.invalid && email.touched">Email is required.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group" [ngClass]="{'has-error': category.invalid && category.touched }">
+                        <input type="text" class="form-control" name="category" placeholder="Category" required
+                            [(ngModel)]="newRider.category" #category="ngModel">
+                
+                        <span class="help-block" *ngIf="category.invalid && category.touched">Category is required.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="sponsors" placeholder="Sponsors"
+                            [(ngModel)]="newRider.sponsors">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-lg btn-block btn-primary"
+                        [disabled]="form.invalid">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="disclaimer-pdf">
+            <h3>Disclaimer (PDF):</h3>
+            
+            <div class="row">
+                <div class="col-md-2">
+                    <ul>
+                        <li><a href="#">Junior Challenge (German)</a></li>
+                        <li><a href="#">B.LADIES (German)</a></li>
+                        <li><a href="#">Amateur (German)</a></li>
+                        <li><a href="#">Pro (German)</a></li>
+                        <li><a href="#">PIONEER (German)</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <ul>
+                        <li><a href="#">Junior Challenge (English)</a></li>
+                        <li><a href="#">B.LADIES (English)</a></li>
+                        <li><a href="#">Amateur (English)</a></li>
+                        <li><a href="#">Pro (English)</a></li>
+                        <li><a href="#">PIONEER (English)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="disclaimer">
+            <h3>Disclaimer (Detsch)</h3>
+            <p>
+                Die Anmeldung zum Contest findet Online statt.<br>
+                Am Veranstaltungstag muss man sich trotzdem final am Registrationsstand in der Location persönlich anmelden. Jeder Teilnehmer ist verpflichtet, den Haftungsausschluss (siehe pdf Datei) auszufüllen und bei der persönlichen Anmeldung am Registrationsstand abzugeben um die Anmeldung perfekt zu machen.
+                <br><br>
+                Minderjährige, die beim Contest mitfahren wollen und ohne Begleitung ihrer Eltern erscheinen, müssen eine Einverständniserklärung ihrer Eltern vorweisen. Mit dem absenden des Online- Registrationsformulars erklärt sich jeder Teilnehmer bereit, dass sein Name, Alter und Heimatland auf der Website für die Dauer des Shred Colognes dargestellt werden. Der Veranstalter verpflichtet sich nach dem deutschen Datenschutzgesetz, streng vertraulich mit den angegeben Daten umzugehen und sie nicht an Dritte weiter zu leiten. Die Veröffentlichung deiner Anmeldung kann einen Tag in Anspruch nehmen. Seid ein wenig geduldig. 
+            </p>
+        </div>        
+    </div>
+
+    <div class="col-sm-4">
+        <div class="disclaimer">
+            <h3>Disclaimer (English)</h3>
+            <p>
+                The Registration needs to be done online.<br>
+                Nevertheless you have to register personally at the Event area. Every rider needs to sign the contest disclaimer (pdf Document) and bring it to the Event registration.
+                <br><br>
+                If you are younger than 18, your parents need to sign the disclaimer. By signing the registration, you comply, that your Name, Age, and Country is presented Online at the Website of Shred Cologne. Shred Cologne will handle your data according to the law of german data privacy with care and not give it to a third party. The release of your registration can take some time. Just be patient and wait for it.
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.header {
+    position: relative;
+    background-color: #53225f;
+}
+
+.header img {
+    display: block;
+    margin: 0 auto;
+}

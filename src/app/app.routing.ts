@@ -22,6 +22,10 @@ const appRoutes: Routes = [
     },
     { path: 'registration', component: RegistrationComponent },
     { path: 'riderlist', component: RiderlistComponent },
+    { 
+        path: 'admin', 
+        loadChildren: 'app/admin/admin.module#AdminModule' //lazy loading
+    },
     { path: '**', component: NotFoundComponent }
 ];
 

@@ -1,0 +1,37 @@
+<h3>Admin Login</h3>
+
+<div class="row">
+    <div class="col-lg-6">
+        <form #form="ngForm" (ngSubmit)="login()">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group" [ngClass]="{'has-error': emailInput.invalid && emailInput.touched }">
+                        <input type="text" class="form-control" name="email" placeholder="Email" required
+                            [(ngModel)]="email" #emailInput="ngModel">
+                
+                        <span class="help-block" *ngIf="emailInput.invalid && emailInput.touched">Email is required.</span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group" [ngClass]="{'has-error': passwordInput.invalid && passwordInput.touched }">
+                        <input type="password" class="form-control" name="password" placeholder="Password" required
+                            [(ngModel)]="password" #passwordInput="ngModel">
+                
+                        <span class="help-block" *ngIf="passwordInput.invalid && passwordInput.touched">Password is required.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-lg btn-block btn-primary"
+                        [disabled]="form.invalid">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

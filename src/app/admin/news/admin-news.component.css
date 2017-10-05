@@ -14,21 +14,3 @@
     text-transform: uppercase;
     font-weight: bold;
 }
-
-.news-entry {
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-.entry-image {
-    width: 23.72881%;
-    margin-left: 0;
-    margin-top: 21px;
-    background: #000;
-    border: 1px solid #000;
-}
-
-.entry-content {
-    width: 74.57627%;
-    padding: 0 20px;
-}

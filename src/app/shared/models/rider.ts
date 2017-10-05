@@ -11,4 +11,5 @@ export class Rider {
     sponsors: string;
     isOk: boolean;
     isOkCategory: string;
+    isSelected: boolean;
 }

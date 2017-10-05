@@ -3,4 +3,6 @@ export class News {
     content: string;
     imageUrl: string;
     date: string;
+    vimeo: string;
+    youtube: string;
 }

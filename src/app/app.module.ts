@@ -15,6 +15,8 @@ import { QuickInfoModule } from './quickinfo/quickinfo.module';
 import { RegistrationComponent} from './registration/registration.component';
 import { RiderlistComponent} from './riderlist/riderlist.component';
 
+import { SafePipe } from './shared/safe-pipe/safe-pipe'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { RiderlistComponent} from './riderlist/riderlist.component';
     NewsComponent,
     RegistrationComponent,
     RiderlistComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

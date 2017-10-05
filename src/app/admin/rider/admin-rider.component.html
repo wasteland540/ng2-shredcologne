@@ -1,0 +1,140 @@
+<div class="content">
+    <div class="row">
+
+
+
+        
+
+
+
+
+        <h3>Juniors:</h3>
+        <table class="stripped riderlist-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rider of ridersJunior | async" (click)="addToSelection(rider)" [class.active]="rider.isSelected">
+                    <td>{{rider.isSelected}}</td>                    
+                    <td>{{rider.firstname}}</td>
+                    <td>{{rider.lastname}}</td>
+                    <td>{{rider.age}}</td>
+                    <td>{{rider.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h3>B.LADIES</h3>
+        <table class="stripped riderlist-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rider of ridersGirls | async" (click)="addToSelection(rider)" [class.active]="rider.isSelected">
+                    <td>{{rider.isSelected}}</td>
+                    <td>{{rider.firstname}}</td>
+                    <td>{{rider.lastname}}</td>
+                    <td>{{rider.age}}</td>
+                    <td>{{rider.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h3>AM:</h3>
+        <table class="stripped riderlist-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rider of ridersAm | async" (click)="addToSelection(rider)" [class.active]="rider.isSelected">
+                    <td>{{rider.isSelected}}</td>
+                    <td>{{rider.firstname}}</td>
+                    <td>{{rider.lastname}}</td>
+                    <td>{{rider.age}}</td>
+                    <td>{{rider.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h3>Pro:</h3>
+        <table class="stripped riderlist-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                    <th>Sponsors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rider of ridersPro | async" (click)="addToSelection(rider)" [class.active]="rider.isSelected">
+                    <td>{{rider.isSelected}}</td>
+                    <td>{{rider.firstname}}</td>
+                    <td>{{rider.lastname}}</td>
+                    <td>{{rider.age}}</td>
+                    <td>{{rider.country}}</td>
+                    <td>{{rider.sponsors}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <h3>Seniors:</h3>
+        <table class="stripped riderlist-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let rider of ridersSenior | async" (click)="addToSelection(rider)" [class.active]="rider.isSelected">
+                    <td>{{rider.isSelected}}</td>
+                    <td>{{rider.firstname}}</td>
+                    <td>{{rider.lastname}}</td>
+                    <td>{{rider.age}}</td>
+                    <td>{{rider.country}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <button (click)="releaseRiders()" class="btn btn-lg btn-block btn-info">Unlock Selected Riders</button>
+        </div>
+        <div class="col-md-4">
+            <button (click)="deleteRiders()" class="btn btn-lg btn-block btn-danger">Delete Selected Riders</button>
+        </div>
+    </div>
+</div>

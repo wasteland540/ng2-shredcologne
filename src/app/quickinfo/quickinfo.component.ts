@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./quickinfo.component.css']
 })
 export class QuickInfoComponent {
-  title = 'QUICKINFO';
 
 }

@@ -1,15 +1,32 @@
-{{title}}
+<div class="content">
+    <div class="site-heading">
+        <h1>News</h1>
+    </div>
 
-<ul>
-    <li class="text" *ngFor="let item of news | async">
-        {{item.$key}}
+    <ul>
+        <li class="text" *ngFor="let item of news | async">
+            <div class="news-entry">
+                <img class="entry-image" src="/assets/images/logo-shred-cologne.png"> 
+                <div class="entry-content">
+                    <h2>{{item.title}}</h2>
+                    
+                    <p>
+                        {{item.content}}
+                    </p>
 
-        <p>
-        {{item.title}}
-        {{item.content}}
-        {{item.imageUrl}}
-        </p>
-    </li>
-</ul>
+                    <img *ngIf="item.imageUrl" [src]="item.imageUrl" width="560" height="370">
 
-<quickinfo-content></quickinfo-content>
+                    <iframe *ngIf="item.vimeo" [src]="item.vimeo | safe" width="640" height="360" frameborder="0" 
+                        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+                    </iframe>
+                
+                    <iframe *ngIf="item.youtube" width="560" height="315" [src]="item.youtube | safe" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </li>
+    </ul>
+        
+    <quickinfo-content></quickinfo-content>
+</div>
+

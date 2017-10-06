@@ -2,7 +2,7 @@ export class News {
     title: string;
     content: string;
     imageUrl: string;
-    date: string;
+    orderDate: number;
     vimeo: string;
     youtube: string;
 }

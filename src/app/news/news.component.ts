@@ -15,9 +15,13 @@ export class NewsComponent implements OnInit {
 
     }
     
-    ngOnInit(): void {
-        //TODO: is there a way to lazy load iframes content???
-        
-        this.news = this.db.list('/news');
+    ngOnInit(): void {        
+        //TODO: is there a way to lazy load iframes content???      
+
+        this.news = this.db.list('/news',{
+            query: {
+                orderByChild: 'orderDate'                
+              }
+        });
     }   
 }

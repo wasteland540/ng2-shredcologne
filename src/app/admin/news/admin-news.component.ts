@@ -21,6 +21,8 @@ export class AdminNewsComponent implements OnInit {
   }   
 
   submitNews(): void {
+    this.newNews.orderDate = Date.now();
+
     this.news.push(this.newNews);
 
     //TODO: clean way...

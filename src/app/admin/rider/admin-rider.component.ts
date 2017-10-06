@@ -63,24 +63,46 @@ export class AdminRiderComponent implements OnInit {
       });
     }
 
-    addToSelection(rider:Rider){
-      //TODO: highlight in view
-      rider.isSelected = !rider.isSelected;
-
-      if(rider.category == 1){
-        this.selectedJunior.push(rider);
+    onRiderSelected(event){
+      if(event.selectedRider.category == 1){
+        if(event.selectedRider.isSelected){
+          this.selectedJunior.push(event.selectedRider);
+        }
+        else {
+          this.selectedJunior.splice(event.selectedRider);
+        }
       }
-      else if(rider.category == 2){
-        this.selectedGirls.push(rider);
+      else if(event.selectedRider.category == 2){
+        if(event.selectedRider.isSelected){
+          this.selectedGirls.push(event.selectedRider);
+        }
+        else {
+          this.selectedGirls.splice(event.selectedRider);
+        }
       }
-      else if(rider.category == 3){
-        this.selectedAm.push(rider);
+      else if(event.selectedRider.category == 3){        
+        if(event.selectedRider.isSelected){
+          this.selectedAm.push(event.selectedRider);
+        }
+        else {
+          this.selectedAm.splice(event.selectedRider);
+        }
       }
-      else if(rider.category == 4){
-        this.selectedPro.push(rider);
+      else if(event.selectedRider.category == 4){
+        if(event.selectedRider.isSelected){
+          this.selectedPro.push(event.selectedRider);
+        }
+        else {
+          this.selectedPro.splice(event.selectedRider);
+        }        
       }
-      else if(rider.category == 5){
-        this.selectedSenior.push(rider);
+      else if(event.selectedRider.category == 5){
+        if(event.selectedRider.isSelected){
+          this.selectedSenior.push(event.selectedRider);
+        }
+        else {
+          this.selectedSenior.slice(event.selectedRider);
+        }
       }
     }
 

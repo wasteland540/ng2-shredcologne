@@ -9,6 +9,7 @@ import { AdminComponent} from './admin.component';
 import { AdminLoginComponent } from './login/admin-login.component';
 import { AdminNewsComponent } from './news/admin-news.component';
 import { AdminRiderComponent } from './rider/admin-rider.component';
+import { AdminRiderTableComponent } from './rider/admin-rider-table.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { AdminRiderComponent } from './rider/admin-rider.component';
     AdminComponent,
     AdminLoginComponent,
     AdminNewsComponent,
-    AdminRiderComponent
+    AdminRiderComponent,
+    AdminRiderTableComponent
   ],
   providers: [
     AuthService,

@@ -4,7 +4,7 @@
     </div>
 
     <ul>
-        <li class="text" *ngFor="let item of news | async">
+        <li class="text" *ngFor="let item of (news | async)?.slice().reverse()">
             <div class="news-entry">
                 <img class="entry-image" src="/assets/images/logo-shred-cologne.png"> 
                 <div class="entry-content">
